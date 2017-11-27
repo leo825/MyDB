@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+<%= title %>
+<%- title %>
+<% users.forEach(function(user){ %>
+<h6><%= user.username %></h6>
+<% }) %>
+
+</body>
+</html>
+
+
+<!--　　这里重点看看index.ejs-->
+<!--　　ejs结尾的文件就是模版文件，可以看到在文件中我们用了三种标签方式（这种标签方式有过其它web开发经验的应该很好看懂）-->
+
+<!--　　1.<%= %>-->
+<!--　　这个标签在接到收到title: '<h1>Express</h1>'时，从显示效果来看，他直接输出HTML标签到页面上，输出的是转义后的变量值-->
+
+<!--　　2.<%- %> 　　-->
+<!--　　而这个标签，从显示效果上看，他没有直接输出HTML代码到页面上，输出的是没有转义后的变量值-->
+
+<!--　　3.<% %>-->
+<!--　　而这个标签，从显示上看，他循环了出来参数中的值，标签中是javascript逻辑代码，注意括号的开闭合-->
