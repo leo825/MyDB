@@ -14,6 +14,7 @@ var userEntity = new UserModel({
     paw:'12'
 });
 
+//这个是向数据库中插入数据
 for(var i = 0; i < 10; i++){
     setTimeout(function(){
         userEntity.save(function(error,doc){
